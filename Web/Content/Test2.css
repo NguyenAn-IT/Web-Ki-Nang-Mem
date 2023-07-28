@@ -1,0 +1,35 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+    background: radial-gradient( circle, rgb(186, 233, 233) 0%, rgb(126, 238, 228) 100% );
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.Header {
+    text-align: center;
+}
+
+    .Header .logo {
+        max-width: 100%;
+        padding: 50px 0;
+    }
+
+
+.title {
+    margin-top: 15px;
+}
+
+    .title .content {
+        margin: 0;
+        position: relative;
+        line-height: 30px;
+        color: #080808;
+    }
+
+        .title .content .content-1, .content-2 {
+            text-align: center;
+        }

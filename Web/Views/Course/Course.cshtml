@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Web.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/Course.css">
+}
+<div class="search">
+
+    @using (Html.BeginForm("Course", "Course"))
+    {
+        <b>Tìm Kiếm:</b>@Html.RadioButton("Searching", "CategoryId")<text>Khóa Học</text>
+        @Html.RadioButton("Searching", "FullName")<text>FullName</text>
+        @Html.RadioButton("Searching", "None", true)<text>None</text>
+        <br />
+        @Html.TextBox("Search")
+        <input type="submit" class="btn btn-default" value="Search" />
+    }
+</div>
+
+<div class="container">
+    <h1>Danh sách khóa học</h1>
+    <ul class="course">
+        @foreach (var course in Model)
+        {
+            <li>
+
+                <div class="date">
+                    <span class="month">@course.DateTime.ToString("MMMM")</span>
+                    <span class="day">@course.DateTime.ToString("dd")</span>
+                    <span class="year">@course.DateTime.ToString("yyyy")</span>
+                </div>
+                <div class="details">
+                    @*<h3>@course.Category</h3>*@
+                    <span class="category">@course.FullName</span><br />
+                    <span class="category">Danh mục: @course.Category.Name</span><br />
+                    <span class="category">Giới tính: @course.Gender</span> <!-- Hiển thị giá trị của thuộc tính "gender" -->
+                    <a href="@Url.Action("Details", "Course", new { id = course.Id })" class="btn btn-primary">Chi tiết</a>
+                    <a href="@Url.Action("Lesson", new { id = course.CategoryId })" class="btn btn-primary">Tới Bài Học</a>
+                </div>
+                <div class="action">
+                    <a href="@Url.Action("Edit","Course", new {id=course.Id})">Edit</a>
+                    <a href="@Url.Action("Delete","Course", new {id=course.Id})">Delete</a>
+                </div>
+            </li>
+        }
+    </ul>
+    
+        <div>
+            @Html.ActionLink("Về trang chủ", "Index", "Home")
+        </div>
+</div>
+                            

@@ -1,0 +1,90 @@
+﻿.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+ul.course {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul.course li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+.date {
+    flex: 0 0 120px;
+    margin-right: 10px;
+}
+
+.month, .day, .year {
+    display: block;
+    text-align: center;
+}
+
+.month {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.day {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.year {
+    font-size: 14px;
+}
+
+.details {
+    flex: 1;
+}
+
+.category {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.action {
+    flex: 0 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+    }
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #0056b3;
+    }

@@ -1,0 +1,257 @@
+﻿
+@{
+    ViewBag.Title = "Test3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kỹ năng mềm - Trang mở đầu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-xxxxxxx" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="~/Content/Test3.css">*@
+
+</head>
+
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Kỹ năng mềm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Course", "Course")">Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Lesson", "Lesson")">Bài học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Test", "Test")">Bài kiểm tra</a>
+                    </li>
+                </ul>
+            </div>
+            @Html.Partial("_LoginPartial")
+        </nav>
+    </header>
+
+    <main>
+        <div class="Header">
+            <div class="logo"><img src="~/Content/images/TG2.jpg"></div>
+            <h2>Kỹ Năng Quản Lý Thời Gian</h2>
+        </div>
+
+        <script src="https://codetienich.github.io/dulieu/mainquiz1.js" type="text/javascript"></script>
+        <div class="quiz-main" data-quiztype="Graded" data-duration="0">
+            <ul>
+                <div class="separator" style="clear: both;">
+                    <b><span style="color: red;">Phải làm đủ các câu thì phần <span style="color: blue;">"Kiểm tra kết quả"</span> mới hiện ra
+                </div></br>
+                <li data-sectionid="1" class="quiz-section">
+                    <div class="quiz-section-title">
+                        <b><span style="color: black; font-family: Times, Times New Roman, serif;">Câu 1: </span></b><b><span style="color: black; font-family: Times, Times New Roman, serif;">Công việc nào cần được ưu tiên đầu tiên</span></b>
+                    </div>
+                    <div class="quiz-section-content">
+                        <div class="item item-question item-choices">
+                            <ul class="list btn-group group-theme">
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-1" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Gấp nhưng không quan trọng </div><br />
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-1" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Không gấp và không quan trọng </div><br />
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-1" data-status=1 data-point=1 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Gấp và quan trọng </div><br />
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-1" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview">Không gấp nhưng quan trọng</div><br />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <br />
+
+                <li data-sectionid="2" class="quiz-section">
+                    <div class="quiz-section-title">
+                        <b><span style="color: black; font-family: Times, Times New Roman, serif;">Câu 2: </span></b><b><span style="color: black; font-family: Times, Times New Roman, serif;">Vì sao chúng ta nên chia nhỏ các công việc?</span></b>
+                    </div>
+                    <div class="quiz-section-content">
+                        <div class="item item-question item-choices">
+                            <ul class="list btn-group group-theme">
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-2" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Giúp cho độ khó khăn của công việc giảm đi nhiều </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-2" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Giúp kiểm soát các "cám dỗ", tránh trì hoãn </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-2" data-status=1 data-point=1 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Giúp bản thân đỡ cảm thấy choáng ngợp, hạn chế trì hoãn </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-2" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview">Giúp bản thân có thêm nhiều thời gian để hoàn thành công việc</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <br />
+
+                <li data-sectionid="3" class="quiz-section">
+                    <div class="quiz-section-title">
+                        <b><span style="color: black; font-family: Times, Times New Roman, serif;">Câu 3: </span></b><b><span style="color: black; font-family: Times, Times New Roman, serif;">Việc lập ra các mục tiêu giúp bạn lên ___________ tốt hơn và ___________ vào những điểm giúp bạn đạt được___________.</span></b>
+                    </div>
+                    <div class="quiz-section-content">
+                        <div class="item item-question item-choices">
+                            <ul class="list btn-group group-theme">
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-3" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Động lực, chăm chỉ, thành tích </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-3" data-status=1 data-point=1 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Kế hoạch, tập trung, mục tiêu </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-3" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Động lực, tập trung, mục tiêu </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-3" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview">Kế hoạch, chăm chỉ, thành tích</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <br />
+
+                <li data-sectionid="4" class="quiz-section">
+                    <div class="quiz-section-title">
+                        <b><span style="color: black; font-family: Times, Times New Roman, serif;">Câu 4: </span></b><b><span style="color: black; font-family: Times, Times New Roman, serif;">Việc nào sau đây giúp bạn nâng cao hứng thú và ý nghĩa cho việc học?</span></b>
+                    </div>
+                    <div class="quiz-section-content">
+                        <div class="item item-question item-choices">
+                            <ul class="list btn-group group-theme">
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-4" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Tham gia hoạt động văn nghệ của trường </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-4" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Tự mình làm tất cả bài tập nhóm </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-4" data-status=1 data-point=1 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Tự thưởng cho bản thân sau khi hoàn thành mục tiêu học tập </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-4" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview">Tìm hiểu những nguồn thông tin chính thống</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <br />
+
+                <li data-sectionid="5" class="quiz-section">
+                    <div class="quiz-section-title">
+                        <b><span style="color: black; font-family: Times, Times New Roman, serif;">Câu 5: </span></b><b><span style="color: black; font-family: Times, Times New Roman, serif;">Nhiệm vụ nào sau đây được cho là nhiệm vụ gấp và quan trọng?</span></b>
+                    </div>
+                    <div class="quiz-section-content">
+                        <div class="item item-question item-choices">
+                            <ul class="list btn-group group-theme">
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-5" data-status=1 data-point=1 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Làm bài tập ngay trước ca học </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-5" data-status=0 data-point=0 /> <span class="mark"></span></label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Tập thể dục </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-5" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview"> Làm bài tập của tuần sau </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <label class="overlabel"><input type="radio" class="hide" name="option-5" data-status=0 data-point=0 /> <span class="mark"></span> </label>
+                                    <div class="boxcheck">
+                                        <div class="answer-desc textview">Lướt Facebook khi xem các thông tin về bệnh dịch</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <br />
+                <div class="quiz-check">
+                    <div class="quiz-result hide"></div>
+                    <a class="btn btn-primary disabled check-quiz">Kiểm tra kết quả</a>
+                    <a class="btn hide reset-quiz">Làm lại</a>
+                </div>
+        </div>
+
+
+
+        <
+    </main>
+    </body>
+</html>
+

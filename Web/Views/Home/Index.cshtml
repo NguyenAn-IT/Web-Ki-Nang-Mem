@@ -1,0 +1,194 @@
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/Default.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kỹ năng mềm - Trang mở đầu</title>
+    <link rel="stylesheet" href="~/Content/Index.css">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Kỹ năng mềm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Course", "Course")">Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Lesson", "Lesson")">Bài học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Test", "Test")">Bài kiểm tra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "FeedBack")">Phản Hồi</a>
+                    </li>
+                </ul>
+            </div>
+            @Html.Partial("_LoginPartial")
+        </nav>
+  </header>
+
+
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Chào mừng đến với Kỹ năng mềm</h1>
+                <p class="lead">Hãy cùng học tập và phát triển các kỹ năng mềm cần thiết cho công việc và cuộc sống của bạn.</p>
+                <a class="btn btn-primary btn-lg" href="@Url.Action("Create", "Course")" role="button">Bắt đầu học ngay</a>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Khóa học -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="text-center">Khóa Học Chúng Tôi</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="~/Content/images/course1.jpg" class="card-img-top" alt="Communication Skills">
+                        <div class="card-body">
+                            <h3 class="card-title">Kỹ Năng Giao Tiếp</h3>
+                            <p class="card-text">Học cách giao tiếp hiệu quả với người khác, cả nói lẫn viết. Chúng tôi cung cấp các khóa học về lắng nghe tích cực, nói trước đám đông và nhiều hơn thế nữa.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="~/Content/images/course2.jpg" class="card-img-top" alt="Problem Solving">
+                        <div class="card-body">
+                            <h3 class="card-title">Giải Quyết Vấn Đề</h3>
+                            <p class="card-text">Học cách giải quyết vấn đề một cách hiệu quả và sáng tạo. Chúng tôi cung cấp các khóa học về tư duy phản biện, phân tích vấn đề và nhiều hơn thế nữa.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="~/Content/images/course3.jpg" class="card-img-top" alt="Time Management">
+                        <div class="card-body">
+                            <h3 class="card-title">Quản Lý Thời Gian</h3>
+                            <p class="card-text">Học cách quản lý thời gian một cách thông minh. Chúng tôi cung cấp các khóa học về ưu tiên công việc, lập kế hoạch và nhiều hơn thế nữa.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- PR BANNER -->
+
+
+    <section class="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="~/Content/images/7.pg.jpg" class="offer-img" alt="offer image">
+                </div>
+                <div class="col-md-6">
+                    <h1>Tự tin đạt được thành công với kỹ năng mềm</h1>
+                    <p>Bạn muốn phát triển sự tự tin và thành công trong sự nghiệp của mình? Hãy tìm hiểu về các kỹ năng mềm cần thiết để đạt được điều đó.</p>
+                    <div class="button">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--feedback-->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Nhận Xét Từ Học Viên</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="~/Content/images/199.jpg" class="testimonial-img rounded-circle" alt="Person 1">
+                        <p class="testimonial-text">Tôi đã học cách quản lý thời gian của mình tốt hơn sau khi tham gia khóa học của Kĩ Năng Mềm. Tôi giờ đây có nhiều thời gian hơn để dành cho gia đình và sở thích của mình. Tôi rất cảm kích sự giúp đỡ của họ.</p>
+                        <p class="testimonial-author">- Nguyễn Văn A</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="~/Content/images/255.jpg" class="testimonial-img rounded-circle" alt="Person 2">
+                        <p class="testimonial-text">Các khóa học của Kĩ Năng Mềm thật sự rất hữu ích và có thể áp dụng được trong cuộc sống hàng ngày. Tôi đã học cách tương tác với người khác tốt hơn và tôi cảm thấy tự tin hơn khi giao tiếp.</p>
+                        <p class="testimonial-author">- Trần Thị B</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="~/Content/images/337.jpg" class="testimonial-img rounded-circle" alt="Person 3">
+                        <p class="testimonial-text">Kĩ Năng Mềm thật sự là một tổ chức tuyệt vời. Tôi đã học được rất nhiều kỹ năng mới và có thể sử dụng chúng trong công việc của mình. Tôi sẽ giới thiệu cho bạn bè và đồng nghiệp của tôi về Kĩ Năng Mềm.</p>
+                        <p class="testimonial-author">- Lê Văn C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Giới Thiệu</h4>
+                    <p>Chúng tôi là một tổ chức chuyên cung cấp các khóa học về kĩ năng mềm cho cá nhân và doanh nghiệp. Chúng tôi đã có nhiều năm kinh nghiệm trong lĩnh vực này và đã giúp hàng ngàn người học tập và phát triển kỹ năng của họ.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Liên Hệ</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-map-marker"></i> 123 Đường Nguyễn Huệ , Quận 1, TP HCM</li>
+                        <li><i class="fa fa-phone"></i> (+84) 999-9999</li>
+                        <li><i class="fa fa-envelope"></i> kinangmem@kgmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Theo Dõi Chúng Tôi</h4>
+                    <ul class="list-unstyled social-network">
+                        <li><a href="#"><img src="~/Content/images/facebook.png"></a></li>
+                        <li><a href="#"><img src="~/Content/images/insta.png"></a></li>
+                        <li><a href="#"><img src="~/Content/images/twiter.png"></a></li>
+                        <li><a href="#"><img src="~/Content/images/gg.png"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">&copy; 2023 Kỹ năng mềm. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+
+</body>
+</html>
+
+
+

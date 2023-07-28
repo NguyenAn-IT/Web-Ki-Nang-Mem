@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kỹ năng mềm - Trang mở đầu</title>
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        <footer>
+            <section class="about-section">
+                <div class="container">
+                    <h2 class="text-center">Giới Thiệu Về Chúng Tôi</h2>
+                    <p class="text-center">Chúng tôi là một tổ chức chuyên cung cấp các khóa học về kĩ năng mềm cho cá nhân và doanh nghiệp. Chúng tôi đã có nhiều năm kinh nghiệm trong lĩnh vực này và đã giúp hàng ngàn người học tập và phát triển kĩ năng của họ.</p>
+                    <a href="#" class="btn btn-primary mx-auto d-block">Tìm Hiểu Thêm</a>
+                </div>
+            </section>
+            <div class="container">
+                <p class="text-muted">&copy; 2023 Kỹ năng mềm. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

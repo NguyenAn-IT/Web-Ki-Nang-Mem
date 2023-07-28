@@ -1,0 +1,52 @@
+﻿@model Web.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/Default.cshtml";
+
+
+}
+
+<link rel="stylesheet" href="~/Content/Register.css">
+
+<body>
+        <section id="loginForm">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4>Đăng kí tài khoản</h4>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+
+        <form class="form">
+            <div class="lb">
+                @Html.LabelFor(m => m.Email, new { @class = "infos" })
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+            <div class="lb">
+                @Html.LabelFor(m => m.Name, new { @class = "infos" })
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+            <div class="lb">
+                @Html.LabelFor(m => m.Password, new { @class = "infos" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+            <div class="lb">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "infos" })
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+            <div>
+                <br />
+                <button id="send" type="submit" value="Register">Send</button>
+                <button id="limpar" type="reset">Clear </button>
+            </div>
+           
+
+        </form>
+            }
+        </section>
+
+    </body>
+
+
+
+@Scripts.Render("~/bundles/jqueryval")
+}
